@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="guest.master.cs" Inherits="cake_shop.guest.guest" %>
+
+<!DOCTYPE html>
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Shop Navbar</title>
+    
+  <!-- Bootstrap CSS (Link to the latest Bootstrap version) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies (Popper and Bootstrap JS) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Custom Styles */
+    .navbar {
+      background-color: #333; /* Light black background */
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #f8c9b6 !important; /* Light cream color on hover */
+    }
+
+    /* Optional: Add margin to the navbar to give some breathing space */
+    .navbar {
+      margin-bottom: 20px;
+    }
+
+
+
+     <!-- Custom CSS for navbar and footer -->
+ 
+     .navbar {
+         background-color: black; /* Light background */
+     }
+     .navbar-nav .nav-link {
+         color: white; /* Dark text */
+     }
+     .navbar-nav .nav-link:hover {
+         color: #007bff; /* Hover effect */
+     }
+
+     .footer {
+         background-color: black;
+         padding: 20px 0;
+         margin-top: 50px;
+         color: white;
+     }
+
+     .footer .social-links a {
+         margin: 0 15px;
+         color: white;
+         font-size: 1.5em; /* Larger icons */
+         text-decoration: none;
+     }
+
+     .footer .social-links a:hover {
+         color: #007bff; /* Hover effect */
+     }
+ 
+  </style>
+</head>
+<body>
+     <form id="form2" runat="server">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <!-- Logo on the left side -->
+      <a class="navbar-brand" href="../admin/adminlogin.aspx">Cake Shop</a>
+
+      <!-- Toggler button for mobile screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links on the right side -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../guest/home.aspx">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../guest/about.aspx">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../guest/contact.aspx">Contact</a>
+          </li>
+             <li class="nav-item">
+          <a class="nav-link" href="../guest/register.aspx">Register</a>
+        </li>
+             <li class="nav-item">
+         <a class="nav-link" href="../guest/login.aspx">Login</a>
+        </li>
+                 <%--<li class="nav-item">
+     <a class="nav-link" href="../guest/booking.aspx">Login</a>
+     </li>--%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+
+    <%--<form id="form1" runat="server">--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+
+
+          <!-- Footer -->
+  <footer class="footer text-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h5>Contact Us</h5>
+                  <p>Email: support@cakeshop.com</p>
+                  <p>Phone: (123) 456-7890</p>
+              </div>
+              <div class="col-md-4">
+                  <h5>Follow Us</h5>
+                  <div class="social-links">
+                      <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <h5>About Us</h5>
+                  <p>We make delicious cakes with love!</p>
+              </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col-12">
+                  <p>&copy; 2024 Cake Shop. All Rights Reserved.</p><br />
+                  <h5>Designed and Developed By - <b>Mahesh Tambade</b></h5>
+              </div>
+          </div>
+      </div>
+  </footer>
+    </form>
+</body>
+</html>
